@@ -39,7 +39,7 @@ function About() {
                         <div className="about-text reveal">
                             <span className="section-label">Our Story</span>
                             <h2 className="section-title">
-                                Creating <em>Memories</em> Since 1984
+                                Creating <em>Memories</em> Since 1994
                             </h2>
                             <p>
                                 <strong>Kim Cayer</strong> founded Kim&apos;s Cast of Characters

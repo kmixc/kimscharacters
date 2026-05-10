@@ -2,6 +2,28 @@ import { Link } from 'react-router-dom'
 
 import brandLogo from '../assets/kimscharacters_svg.svg'
 
+function InstagramIcon() {
+    return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+                fill="currentColor"
+                d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75a4 4 0 0 0-4 4v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4h-8.5Zm8.88 1.5a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25ZM12 6.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 6.5Zm0 1.75A3.75 3.75 0 1 0 15.75 12 3.75 3.75 0 0 0 12 8.25Z"
+            />
+        </svg>
+    )
+}
+
+function FacebookIcon() {
+    return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+                fill="currentColor"
+                d="M13.27 22v-8.2h2.76l.41-3.2h-3.17V8.56c0-.93.26-1.56 1.59-1.56H16.6V4.14c-.3-.04-1.32-.14-2.51-.14-2.49 0-4.19 1.52-4.19 4.32v2.28H7.1v3.2h2.8V22h3.37Z"
+            />
+        </svg>
+    )
+}
+
 function Footer() {
     return (
         <footer>
@@ -26,18 +48,23 @@ function Footer() {
                             Ontario.
                         </p>
                         <div className="social-row">
-                            <Link to="/performers" className="social-btn" title="Performers">
-                                🎭
-                            </Link>
-                            <Link to="/about" className="social-btn" title="About">
-                                ✨
-                            </Link>
-                            <Link to="/book" className="social-btn" title="Book">
-                                📅
-                            </Link>
-                            <a href="mailto:kimscharacters@gmail.com" className="social-btn" title="Email">
-                                ✉
+                            <a
+                                href="https://www.instagram.com/kimscharacters/"
+                                className="social-btn"
+                                title="Instagram"
+                                aria-label="Visit Kim's Cast of Characters on Instagram"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <InstagramIcon />
                             </a>
+                            <span
+                                className="social-btn social-btn-disabled"
+                                title="Facebook coming soon"
+                                aria-label="Facebook coming soon"
+                            >
+                                <FacebookIcon />
+                            </span>
                         </div>
                     </div>
 

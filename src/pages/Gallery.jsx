@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
     galleryHighlights,
@@ -6,9 +6,32 @@ import {
     galleryPhotoPlaceholders,
 } from '../siteData'
 
+function shuffleItems(items) {
+    const shuffledItems = [...items]
+
+    for (let index = shuffledItems.length - 1; index > 0; index -= 1) {
+        const swapIndex = Math.floor(Math.random() * (index + 1))
+        const currentItem = shuffledItems[index]
+
+        shuffledItems[index] = shuffledItems[swapIndex]
+        shuffledItems[swapIndex] = currentItem
+    }
+
+    return shuffledItems
+}
+
 function Gallery() {
     const [activeItems, setActiveItems] = useState([])
     const [activePhotoIndex, setActivePhotoIndex] = useState(null)
+
+    const showcasePhotos = useMemo(() => {
+        const featuredMomentSources = new Set(galleryMoments.map((item) => item.src))
+        const uniqueShowcasePhotos = galleryPhotoPlaceholders.filter(
+            (item) => !featuredMomentSources.has(item.src)
+        )
+
+        return shuffleItems(uniqueShowcasePhotos)
+    }, [])
 
     const activePhoto =
         activePhotoIndex === null ? null : activeItems[activePhotoIndex] ?? null
@@ -64,26 +87,26 @@ function Gallery() {
     }, [activeItems.length, activePhoto])
 
     const openPhotoShowcaseItem = (itemId) => {
-        const photoIndex = galleryPhotoPlaceholders.findIndex((item) => item.id === itemId)
+        const photoIndex = showcasePhotos.findIndex((item) => item.id === itemId)
 
         if (photoIndex !== -1) {
-            setActiveItems(galleryPhotoPlaceholders)
+            setActiveItems(showcasePhotos)
             setActivePhotoIndex(photoIndex)
         }
     }
 
     const openPhotoShowcaseFromMoment = (moment) => {
-        const directMatchIndex = galleryPhotoPlaceholders.findIndex((item) => item.src === moment.src)
+        const directMatchIndex = showcasePhotos.findIndex((item) => item.src === moment.src)
 
         if (directMatchIndex !== -1) {
-            setActiveItems(galleryPhotoPlaceholders)
+            setActiveItems(showcasePhotos)
             setActivePhotoIndex(directMatchIndex)
             return
         }
 
         setActiveItems([
             moment,
-            ...galleryPhotoPlaceholders.filter((item) => item.src !== moment.src),
+            ...showcasePhotos.filter((item) => item.src !== moment.src),
         ])
         setActivePhotoIndex(0)
     }
@@ -172,7 +195,7 @@ function Gallery() {
                     </div>
 
                     <div className="gallery-photo-wall">
-                        {galleryPhotoPlaceholders.map((item, index) => (
+                        {showcasePhotos.map((item, index) => (
                             <button
                                 key={item.id}
                                 type="button"

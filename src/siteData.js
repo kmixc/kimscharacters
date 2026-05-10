@@ -415,7 +415,7 @@ export const aboutPillars = [
 
 export const milestones = [
     {
-        year: '1984',
+        year: '1994',
         title: 'Kim launches the agency',
         description:
             'What started as a performance business grew into a trusted entertainment roster for the GTA.',

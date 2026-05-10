@@ -1,11 +1,44 @@
 import { useState } from 'react'
 import { performers } from '../siteData'
 
+const bookingFormEndpoint = 'https://formspree.io/f/xdabpvdg'
+
 function Book() {
     const [selectedBooking, setSelectedBooking] = useState('')
     const [selectedEventType, setSelectedEventType] = useState('')
+    const [submitState, setSubmitState] = useState('idle')
     const showOtherBookingField = selectedBooking === 'Other'
     const showOtherEventTypeField = selectedEventType === 'Other'
+
+    const handleSubmit = async (event) => {
+        event.preventDefault()
+
+        const form = event.currentTarget
+        const formData = new FormData(form)
+
+        setSubmitState('submitting')
+
+        try {
+            const response = await fetch(bookingFormEndpoint, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    Accept: 'application/json',
+                },
+            })
+
+            if (!response.ok) {
+                throw new Error('Booking request failed')
+            }
+
+            form.reset()
+            setSelectedBooking('')
+            setSelectedEventType('')
+            setSubmitState('success')
+        } catch {
+            setSubmitState('error')
+        }
+    }
 
     return (
         <>
@@ -54,8 +87,9 @@ function Book() {
                     <div className="booking-form-layout">
                         <form
                             className="booking-form reveal"
-                            action="https://formspree.io/f/xdabpvdg"
+                            action={bookingFormEndpoint}
                             method="POST"
+                            onSubmit={handleSubmit}
                         >
                             <input
                                 type="hidden"
@@ -189,9 +223,23 @@ function Book() {
                             </div>
 
                             <div className="full-width form-submit-row">
-                                <button type="submit" className="btn-primary booking-submit">
+                                <button
+                                    type="submit"
+                                    className="btn-primary booking-submit"
+                                    disabled={submitState === 'submitting'}
+                                >
                                     Send Booking Request
                                 </button>
+                                {submitState === 'success' ? (
+                                    <p className="booking-form-status" role="status">
+                                        Submitted. We got your email and we&apos;ll get back to you shortly.
+                                    </p>
+                                ) : null}
+                                {submitState === 'error' ? (
+                                    <p className="booking-form-status booking-form-status-error" role="alert">
+                                        Something went wrong sending your request. Please try again.
+                                    </p>
+                                ) : null}
                             </div>
                         </form>
 
