@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { reasons, servicePromises, whyProofPoints } from '../siteData'
+import { featuredImages, reasons, servicePromises, whyProofPoints } from '../siteData'
 
 function WhyUs() {
     return (
@@ -29,7 +29,7 @@ function WhyUs() {
                 </div>
             </section>
 
-            <section className="why">
+            <section className="why why-page">
                 <div className="section-inner">
                     <div className="why-inner-wrap">
                         <div className="why-left">
@@ -67,12 +67,18 @@ function WhyUs() {
 
                         <div className="why-visual reveal reveal-delay-2">
                             <div className="why-img-card">
-                                <span className="img-icon">🏆</span>
-                                <span>Long-term client trust</span>
+                                <img
+                                    className="why-card-img"
+                                    src={featuredImages.whyCrowd.src}
+                                    alt={featuredImages.whyCrowd.alt}
+                                />
                             </div>
                             <div className="why-img-card">
-                                <span className="img-icon">🎪</span>
-                                <span>Strong event atmosphere</span>
+                                <img
+                                    className="why-card-img"
+                                    src={featuredImages.whyEvent.src}
+                                    alt={featuredImages.whyEvent.alt}
+                                />
                             </div>
                         </div>
                     </div>

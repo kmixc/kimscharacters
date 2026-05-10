@@ -1,3 +1,36 @@
+const imageModules = import.meta.glob('./assets/img/*.{jpg,jpeg,png,webp,avif}', {
+    eager: true,
+    import: 'default',
+})
+
+const imageByName = Object.fromEntries(
+    Object.entries(imageModules).map(([path, source]) => {
+        const fileName = path.split('/').pop() ?? ''
+        const baseName = fileName.replace(/\.[^.]+$/, '')
+
+        return [baseName, source]
+    })
+)
+
+export const featuredImages = {
+    hero: {
+        src: imageByName.performer_hero_1,
+        alt: 'A Kim\'s Cast performer entertaining guests at an event',
+    },
+    about: {
+        src: imageByName.kim_1,
+        alt: 'Kim Cayer with performers from Kim\'s Cast of Characters',
+    },
+    whyEvent: {
+        src: imageByName.performer_at_event_1,
+        alt: 'A performer engaging guests at a live event',
+    },
+    whyCrowd: {
+        src: imageByName.crowd_engagement_1,
+        alt: 'Guests reacting to live entertainment at an event',
+    },
+}
+
 export const confettiColors = [
     '#FFD93D',
     '#FF6B6B',
@@ -21,6 +54,46 @@ export const confettiDots = Array.from({ length: 28 }, (_, index) => {
 
 export const performers = [
     {
+        icon: '🎩',
+        title: 'Magicians',
+        description:
+            'Interactive sleight-of-hand, visual illusions, and polished performance that keep guests engaged up close and on stage.',
+        linkLabel: 'Book This Act',
+        detail: 'Great for corporate events, private parties, receptions, and family-friendly entertainment.',
+    },
+    {
+        icon: '🎈',
+        title: 'Balloonists',
+        description:
+            'Fast, colorful balloon creations that double as entertainment and take-home fun for kids and families.',
+        linkLabel: 'Book This Act',
+        detail: 'Ideal for school events, family festivals, community days, and birthday parties.',
+    },
+    {
+        icon: '🤡',
+        title: 'Clowns',
+        description:
+            'Playful performers who mix comedy, crowd interaction, and classic family entertainment for all-ages events.',
+        linkLabel: 'Book This Act',
+        detail: 'Perfect for birthday parties, community events, fairs, and family celebration programming.',
+    },
+    {
+        icon: '🎨',
+        title: 'Face Painters',
+        description:
+            'Professional artists creating quick, vibrant designs that keep lines moving while adding a memorable guest experience.',
+        linkLabel: 'Book This Act',
+        detail: 'Strong fit for festivals, school fun fairs, grand openings, and family activations.',
+    },
+    {
+        icon: '✨',
+        title: 'Glitter Tattoos',
+        description:
+            'Sparkling, skin-safe designs that add instant glamour and a fun interactive station guests love to visit.',
+        linkLabel: 'Book This Act',
+        detail: 'Popular for parties, brand activations, school events, and all-ages celebrations.',
+    },
+    {
         icon: '🦵',
         title: 'Stilt Walkers',
         description:
@@ -37,12 +110,12 @@ export const performers = [
         detail: 'Ideal for family events, corporate receptions, and public celebrations.',
     },
     {
-        icon: '🔮',
-        title: 'Fortune Tellers',
+        icon: '🏕️',
+        title: 'Kids Camps',
         description:
-            'Tarot, palm readings, and crystal ball sessions that add mystery, intimacy, and conversation to your event.',
+            'Creative, hands-on camp-style workshops for kids with guided activities, games, and entertainment that keep groups engaged.',
         linkLabel: 'Book This Act',
-        detail: 'Perfect for parties, seasonal events, and immersive themed experiences.',
+        detail: 'Ideal for schools, community programs, seasonal camps, and kids event programming.',
     },
     {
         icon: '🎭',
@@ -65,7 +138,7 @@ export const performers = [
 export const reasons = [
     {
         icon: '🏆',
-        title: '40+ Years of Proven Experience',
+        title: '30+ Years of Proven Experience',
         description:
             'Decades of events, satisfied clients, and a reputation built on consistency and quality.',
     },
@@ -126,11 +199,31 @@ export const servicePromises = [
 ]
 
 export const galleryItems = [
-    { icon: '🎪', label: 'Feature Performance Shot' },
-    { icon: '🤹', label: 'Juggler in Action' },
-    { icon: '🔮', label: 'Fortune Teller Session' },
-    { icon: '🦵', label: 'Stilt Walker Parade' },
-    { icon: '🎭', label: 'Character Meet & Greet' },
+    {
+        label: 'Feature Performance Shot',
+        src: imageByName.performer_hero_1,
+        alt: 'Feature entertainment performance at a live event',
+    },
+    {
+        label: 'Juggler in Action',
+        src: imageByName.img_8,
+        alt: 'Live performer in action at an event',
+    },
+    {
+        label: 'Fortune Teller Session',
+        src: imageByName.img_14,
+        alt: 'One-on-one performer interaction with an event guest',
+    },
+    {
+        label: 'Stilt Walker Parade',
+        src: imageByName.img_21,
+        alt: 'Roaming entertainment moving through a crowd',
+    },
+    {
+        label: 'Character Meet & Greet',
+        src: imageByName.img_27,
+        alt: 'Character performer greeting guests at an event',
+    },
 ]
 
 export const galleryMoments = [
@@ -138,49 +231,55 @@ export const galleryMoments = [
         category: 'Festival Entry',
         title: 'Big arrival energy',
         caption: 'Stilt walkers and roaming acts turning entrances into instant attention.',
-        icon: '🦵',
         size: 'tall',
         tone: 'sun',
+        src: imageByName.img_31,
+        alt: 'Roaming entertainers creating a strong event entrance',
     },
     {
         category: 'Guest Interaction',
         title: 'Close-up crowd moments',
         caption: 'One-on-one entertainment that keeps guests engaged between headline beats.',
-        icon: '🔮',
         size: 'wide',
         tone: 'teal',
+        src: imageByName.performer_at_event_1,
+        alt: 'Performer engaging closely with guests during an event',
     },
     {
         category: 'Theme Work',
         title: 'Characters with presence',
         caption: 'Photo-friendly appearances that give themed events a stronger identity.',
-        icon: '🎭',
         size: 'square',
         tone: 'coral',
+        src: imageByName.img_25,
+        alt: 'Character entertainment at a themed event',
     },
     {
         category: 'Live Showcase',
         title: 'Feature-act moments',
         caption: 'Skill-driven performances that anchor the room and pull eyes forward.',
-        icon: '🤹',
         size: 'square',
         tone: 'plum',
+        src: imageByName.img_18,
+        alt: 'Feature performer holding the room during a live event',
     },
     {
         category: 'Public Events',
         title: 'Family-friendly atmosphere',
         caption: 'Warm, playful scenes suited to community days, fairs, and seasonal programs.',
-        icon: '🎪',
         size: 'wide',
         tone: 'cream',
+        src: imageByName.crowd_engagement_1,
+        alt: 'Family-friendly entertainment drawing in a public event crowd',
     },
     {
         category: 'Custom Bookings',
         title: 'Entertainment shaped to the brief',
         caption: 'Acts mixed around venue flow, audience age, and the kind of mood clients want.',
-        icon: '✨',
         size: 'square',
         tone: 'sun',
+        src: imageByName.img_33,
+        alt: 'Custom entertainment setup tailored to a client event brief',
     },
 ]
 
@@ -222,19 +321,25 @@ const galleryPhotoThemes = [
     },
 ]
 
-export const galleryPhotoPlaceholders = Array.from({ length: 30 }, (_, index) => {
+const numberedGalleryPhotos = Array.from({ length: 30 }, (_, index) => {
+    const photoNumber = index + 1
+    const photoKey = `img_${photoNumber}`
     const theme = galleryPhotoThemes[index % galleryPhotoThemes.length]
 
     return {
-        id: `gallery-photo-${index + 1}`,
-        label: `Photo ${String(index + 1).padStart(2, '0')}`,
+        id: `gallery-photo-${photoNumber}`,
+        label: `Photo ${String(photoNumber).padStart(2, '0')}`,
         category: theme.category,
         title: theme.title,
         icon: theme.icon,
         tone: theme.tone,
         ratio: theme.ratio,
+        src: imageByName[photoKey],
+        alt: `Event entertainment photo ${photoNumber}`,
     }
 })
+
+export const galleryPhotoPlaceholders = numberedGalleryPhotos
 
 export const galleryCollections = [
     {
@@ -263,7 +368,7 @@ export const galleryHighlights = [
         label: 'events animated',
     },
     {
-        value: '40+',
+        value: '30+',
         label: 'years in live entertainment',
     },
     {

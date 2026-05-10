@@ -1,4 +1,4 @@
-import { aboutPillars, milestones } from '../siteData'
+import { aboutPillars, featuredImages, milestones } from '../siteData'
 
 function About() {
     return (
@@ -27,7 +27,7 @@ function About() {
                         <div className="story-chip-group">
                             <div className="story-chip">Mississauga based</div>
                             <div className="story-chip">Serving the GTA</div>
-                            <div className="story-chip">40+ years</div>
+                            <div className="story-chip">30+ years</div>
                         </div>
                     </div>
                 </div>
@@ -59,11 +59,15 @@ function About() {
                         </div>
                         <div className="about-img reveal reveal-delay-2">
                             <div className="about-photo">
-                                <span className="img-icon">📸</span>
-                                <span>Kim Cayer and company story</span>
+                                <img
+                                    className="about-photo-img"
+                                    src={featuredImages.about.src}
+                                    alt={featuredImages.about.alt}
+                                />
+                                <span className="about-photo-label">Kim Cayer and company story</span>
                             </div>
                             <div className="about-tag">
-                                40+
+                                30+
                                 <span>Years of Magic</span>
                             </div>
                         </div>

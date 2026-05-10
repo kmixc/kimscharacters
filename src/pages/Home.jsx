@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { galleryItems, reasons } from '../siteData'
+import { featuredImages, galleryItems, reasons } from '../siteData'
 
 function Home() {
     return (
@@ -7,12 +7,12 @@ function Home() {
             <section className="hero page-hero-home">
                 <div className="hero-inner">
                     <div className="hero-content">
-                        <div className="hero-badge">Serving the GTA for 40+ Years</div>
+                        <div className="hero-badge">Serving the GTA for 30+ Years</div>
                         <h1>
                             Unforgettable <em>Entertainment</em> for Every Event
                         </h1>
                         <p className="hero-sub">
-                            From stilt walkers to fortune tellers, Kim&apos;s Cast of Characters
+                            From stilt walkers to kids camps, Kim&apos;s Cast of Characters
                             brings the magic of live performance to parties, corporate events,
                             and festivals across the Greater Toronto Area.
                         </p>
@@ -26,7 +26,7 @@ function Home() {
                         </div>
                         <div className="hero-stats">
                             <div className="stat-item">
-                                <strong>40+</strong>
+                                <strong>30+</strong>
                                 <span>Years Experience</span>
                             </div>
                             <div className="stat-item">
@@ -42,8 +42,14 @@ function Home() {
 
                     <div className="hero-visual">
                         <div className="hero-img-main">
-                            <span className="img-icon">🎪</span>
-                            <span className="img-label">Performer Hero Image</span>
+                            <img
+                                className="hero-img"
+                                src={featuredImages.hero.src}
+                                alt={featuredImages.hero.alt}
+                            />
+                            <div className="hero-img-overlay">
+                                <span className="img-label">Live entertainment across the GTA</span>
+                            </div>
                         </div>
                         <div className="float-card float-top-right">
                             <span className="fc-icon">⭐</span>
@@ -137,13 +143,19 @@ function Home() {
                         </div>
 
                         <div className="why-visual reveal reveal-delay-2">
-                            <div className="why-img-card">
-                                <span className="img-icon">📷</span>
-                                <span>Performer at Event</span>
+                            <div className="why-img-card why-img-card-landscape">
+                                <img
+                                    className="why-card-img"
+                                    src={featuredImages.whyEvent.src}
+                                    alt={featuredImages.whyEvent.alt}
+                                />
                             </div>
-                            <div className="why-img-card">
-                                <span className="img-icon">🎉</span>
-                                <span>Crowd Engagement</span>
+                            <div className="why-img-card why-img-card-portrait">
+                                <img
+                                    className="why-card-img"
+                                    src={featuredImages.whyCrowd.src}
+                                    alt={featuredImages.whyCrowd.alt}
+                                />
                             </div>
                         </div>
                     </div>
@@ -175,8 +187,7 @@ function Home() {
                                     .filter(Boolean)
                                     .join(' ')}
                             >
-                                <span className="img-icon">{item.icon}</span>
-                                <span>{item.label}</span>
+                                <img className="gal-item-img" src={item.src} alt={item.alt} />
                             </div>
                         ))}
                     </div>
