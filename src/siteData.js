@@ -436,20 +436,14 @@ export const milestones = [
 export const performerCategories = [
     {
         title: 'Roaming acts',
-        description:
-            'Great for arrival moments, crowd building, and keeping large venues visually alive.',
         items: 'Mascots, character actors, interactive hosts',
     },
     {
         title: 'Stage shows',
-        description:
-            'Best for entertaining large groups when you need a performer to hold attention from the front of the room.',
         items: 'Magicians, jugglers, specialty acts, themed feature performances',
     },
     {
         title: 'Crowd pleasers',
-        description:
-            'Designed for fun, easy guest interaction and walk-around entertainment people naturally gather around.',
         items: 'Caricaturists, glitter tattoos, balloonists, face painters, interactive entertainers',
     },
 ]
@@ -497,7 +491,7 @@ export const bookingPackages = [
 ]
 
 export const clientShowcase = [
-    'MetroLinx',
+    'Metrolinx',
     'Toronto Raptors',
     'Canadian National Exhibition',
     'Eaton Centre',
