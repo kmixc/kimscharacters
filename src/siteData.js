@@ -14,7 +14,7 @@ const imageByName = Object.fromEntries(
 
 export const featuredImages = {
     hero: {
-        src: imageByName.img_22,
+        src: imageByName.performer_hero_1,
         alt: 'Young elf performers with Santa at a holiday event',
     },
     about: {
