@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom'
-import { featuredImages, reasons, servicePromises, whyProofPoints } from '../siteData'
+import {
+    clientShowcase,
+    featuredImages,
+    reasons,
+    servicePromises,
+    whyProofPoints,
+} from '../siteData'
 
 function WhyUs() {
     return (
@@ -9,12 +15,11 @@ function WhyUs() {
                     <div className="reveal">
                         <span className="section-label">Why Choose Us</span>
                         <h1 className="page-title light-title">
-                            Entertainment that feels <em>considered</em>, not off-the-shelf
+                            Entertainment that feels <em>right</em> for your event
                         </h1>
                         <p className="section-lead page-lead light-lead">
-                            Kim&apos;s Cast of Characters is built around fit: the right act,
-                            the right tone, and the kind of event support that makes the day
-                            easier instead of more complicated.
+                            Kim&apos;s Cast of Characters helps you book the right act, the right
+                            tone, and a smooth experience from start to finish.
                         </p>
                     </div>
 
@@ -33,14 +38,14 @@ function WhyUs() {
                 <div className="section-inner">
                     <div className="why-inner-wrap">
                         <div className="why-left">
-                            <span className="section-label">Trusted Across the GTA</span>
+                            <span className="section-label">Serving Milton to Markham and beyond</span>
                             <h2 className="section-title">
                                 The difference is in the <em>follow-through</em>
                             </h2>
                             <p className="section-lead">
-                                The roster matters, but so do the details behind it: clear
-                                planning, dependable performers, and entertainment choices that
-                                feel appropriate for the audience and venue.
+                                Great performers matter, and so does the way the booking is
+                                handled: clear planning, dependable entertainers, and choices
+                                that fit the audience and venue.
                             </p>
 
                             <ul className="why-list">
@@ -90,7 +95,7 @@ function WhyUs() {
                     <div className="section-heading reveal">
                         <span className="section-label">What You Can Expect</span>
                         <h2 className="section-title">
-                            A booking partner with real <em>standards</em>
+                            What you can <em>expect</em>
                         </h2>
                     </div>
 
@@ -114,6 +119,34 @@ function WhyUs() {
                 </div>
             </section>
 
+            <section className="page-section">
+                <div className="section-inner">
+                    <div className="section-heading reveal">
+                        <span className="section-label">Places We&apos;ve Worked</span>
+                        <h2 className="section-title">
+                            Seen at events across the <em>region</em>
+                        </h2>
+                    </div>
+
+                    <div className="metric-grid">
+                        {clientShowcase.map((item, index) => (
+                            <article
+                                key={item}
+                                className={[
+                                    'metric-card',
+                                    'reveal',
+                                    index > 0 ? `reveal-delay-${Math.min(index, 2)}` : '',
+                                ]
+                                    .filter(Boolean)
+                                    .join(' ')}
+                            >
+                                <strong>{item}</strong>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             <section className="contact-banner page-section">
                 <div className="section-inner contact-banner-inner reveal">
                     <div>
@@ -122,8 +155,8 @@ function WhyUs() {
                             If the event matters, the <em>match</em> matters too
                         </h2>
                         <p className="section-lead">
-                            Tell us what kind of experience you want guests to remember, and
-                            we&apos;ll recommend performers that actually fit the brief.
+                            Tell us what kind of event you&apos;re planning, and we&apos;ll recommend
+                            performers that fit.
                         </p>
                     </div>
                     <div className="contact-actions">

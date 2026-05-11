@@ -73,7 +73,7 @@ export const performers = [
         icon: '🤡',
         title: 'Clowns',
         description:
-            'Playful performers who mix comedy, crowd interaction, and classic family entertainment for all-ages events.',
+            'Playful performers who mix comedy, crowd interaction, and classic family entertainment for all-ages events. Can be a classic clown or any style/look you want.',
         linkLabel: 'Book This Act',
         detail: 'Perfect for birthday parties, community events, fairs, and family celebration programming.',
     },
@@ -94,12 +94,12 @@ export const performers = [
         detail: 'Popular for parties, brand activations, school events, and all-ages celebrations.',
     },
     {
-        icon: '🦵',
-        title: 'Stilt Walkers',
+        icon: '🎭',
+        title: 'Mascots',
         description:
-            'Tower over the crowd and command attention from across the venue. Our stilt walkers are seasoned pros who create instant atmosphere.',
+            'Friendly mascot performers who bring big reactions, great photo moments, and fun energy to family events and public appearances.',
         linkLabel: 'Book This Act',
-        detail: 'Best for festivals, parades, brand activations, and outdoor events.',
+        detail: 'Great for schools, community events, store promotions, parades, and family celebrations.',
     },
     {
         icon: '🤹',
@@ -144,21 +144,20 @@ export const reasons = [
     },
     {
         icon: '📍',
-        title: 'Trusted Across the GTA',
+        title: 'Wide Coverage',
         description:
-            "From Mississauga to Markham, we've performed at events of every scale across the Greater Toronto Area.",
+            'Serving everywhere GTA from Milton to Markham, Niagara Falls to Barrie.',
     },
     {
         icon: '🎨',
         title: 'Wide Range of Performers',
         description:
-            'One conversation gets you access to our full roster, with combinations tailored to your crowd and format.',
+            'One conversation gives you access to our full performer list, with options that fit your crowd and event.',
     },
     {
         icon: '📞',
         title: 'Easy, Stress-Free Booking',
-        description:
-            'Share the event details, and we will guide the performer mix, timing, and logistics from there.',
+        description: 'Easy stress-free booking.',
     },
 ]
 
@@ -176,25 +175,25 @@ export const whyProofPoints = [
     {
         title: 'Straightforward communication',
         description:
-            'Clients get practical recommendations, responsive follow-up, and a booking process that stays easy to manage.',
+            'Clients get clear answers, practical suggestions, and a booking process that stays simple.',
     },
 ]
 
 export const servicePromises = [
     {
-        title: 'Curated recommendations',
+        title: 'Simple suggestions',
         description:
-            'Acts are matched to your audience, layout, and event tone instead of being offered as a generic list.',
+            'We help you choose acts that fit your audience, space, and event style.',
     },
     {
-        title: 'Professional presentation',
+        title: 'Reliable performers',
         description:
-            'Performers are selected for presence, reliability, and their ability to elevate the experience on site.',
+            'Our performers show up ready, connect with guests, and keep the event moving.',
     },
     {
-        title: 'Budget-aware planning',
+        title: 'Options for different budgets',
         description:
-            'Packages can scale from one key feature act to a broader entertainment lineup without losing cohesion.',
+            'You can book one act or a bigger lineup depending on what your event needs.',
     },
 ]
 
@@ -230,7 +229,7 @@ export const galleryMoments = [
     {
         category: 'Festival Entry',
         title: 'Big arrival energy',
-        caption: 'Stilt walkers and roaming acts turning entrances into instant attention.',
+        caption: 'Mascots and roaming acts that make an entrance feel fun right away.',
         size: 'tall',
         tone: 'sun',
         src: imageByName.img_31,
@@ -364,7 +363,7 @@ export const galleryCollections = [
 
 export const galleryHighlights = [
     {
-        value: '500+',
+        value: '5000+',
         label: 'events animated',
     },
     {
@@ -379,19 +378,19 @@ export const galleryHighlights = [
 
 export const galleryBusinessNotes = [
     {
-        value: 'Curated',
-        title: 'Performer mixes, not random listings',
-        description: 'Acts are chosen around event tone, flow, and guest profile.',
+        value: 'Helpful',
+        title: 'We help you pick the right acts',
+        description: 'We suggest performers based on your event, guests, and space.',
     },
     {
         value: 'Flexible',
-        title: 'Works for private, public, and branded events',
-        description: 'Bookings scale from one visual feature to a fuller cast lineup.',
+        title: 'Works for parties, schools, and public events',
+        description: 'You can book one act or a full entertainment mix.',
     },
     {
         value: 'Trusted',
-        title: 'A business built on repeat clients',
-        description: 'The gallery reflects the kind of atmosphere people come back for.',
+        title: 'Families and event teams book us again',
+        description: 'The gallery shows the kind of fun and energy people come back for.',
     },
 ]
 
@@ -407,30 +406,30 @@ export const aboutPillars = [
             'Every act is selected for stage presence, professionalism, and crowd connection.',
     },
     {
-        title: 'Flexible event planning',
+        title: 'Planning that fits your event',
         description:
-            'From a single performer to a multi-act lineup, the booking scales to the event.',
+            'From one performer to a full lineup, we help you book what makes sense for your event.',
     },
 ]
 
 export const milestones = [
     {
-        year: '1994',
+        year: '1996',
         title: 'Kim launches the agency',
         description:
-            'What started as a performance business grew into a trusted entertainment roster for the GTA.',
+            'What started as a performance business grew into a trusted entertainment team for events across the region.',
     },
     {
-        year: '2000s',
+        year: '2002',
         title: 'Expanded roster and event formats',
         description:
             'The cast grew to support community festivals, corporate events, private parties, and themed activations.',
     },
     {
         year: 'Today',
-        title: 'A curated entertainment partner',
+        title: 'A trusted local entertainment team',
         description:
-            'Kim\'s Cast continues to match professional performers to events that need memorable live energy.',
+            'Kim\'s Cast continues to help clients book professional performers for fun, memorable events.',
     },
 ]
 
@@ -439,7 +438,7 @@ export const performerCategories = [
         title: 'Roaming acts',
         description:
             'Great for arrival moments, crowd building, and keeping large venues visually alive.',
-        items: 'Stilt walkers, character actors, interactive hosts',
+        items: 'Mascots, character actors, interactive hosts',
     },
     {
         title: 'Featured moments',
@@ -464,9 +463,9 @@ export const bookingSteps = [
     },
     {
         step: '02',
-        title: 'Get a tailored recommendation',
+        title: 'Get simple ideas',
         description:
-            'We will suggest performers, timing, and package options that fit the event and budget.',
+            'We will suggest performers and package options that fit your event and budget.',
     },
     {
         step: '03',
@@ -495,4 +494,13 @@ export const bookingPackages = [
         description:
             'A tailored combination for galas, launches, activations, and larger public programs.',
     },
+]
+
+export const clientShowcase = [
+    'MetroLinx',
+    'Toronto Raptors',
+    'Canadian National Exhibition',
+    'Eaton Centre',
+    'Yorkdale Mall',
+    'Parades',
 ]

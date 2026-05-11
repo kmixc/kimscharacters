@@ -1,4 +1,4 @@
-import { aboutPillars, featuredImages, milestones } from '../siteData'
+import { aboutPillars, clientShowcase, featuredImages, milestones } from '../siteData'
 
 function About() {
     return (
@@ -8,12 +8,12 @@ function About() {
                     <div className="reveal">
                         <span className="section-label">About Kim&apos;s Cast</span>
                         <h1 className="page-title">
-                            Built on <em>trust</em>, taste, and decades of live performance
+                            Built on <em>trust</em> and decades of live performance
                         </h1>
                         <p className="section-lead page-lead">
                             Kim&apos;s Cast of Characters started with one performer and grew into
-                            a trusted entertainment partner for events that need more than a
-                            generic booking list.
+                            a trusted entertainment team for events that need dependable,
+                            fun performers.
                         </p>
                     </div>
                     <div className="story-panel reveal reveal-delay-2">
@@ -39,22 +39,22 @@ function About() {
                         <div className="about-text reveal">
                             <span className="section-label">Our Story</span>
                             <h2 className="section-title">
-                                Creating <em>Memories</em> Since 1994
+                                Creating <em>Memories</em> Since 1996
                             </h2>
                             <p>
                                 <strong>Kim Cayer</strong> founded Kim&apos;s Cast of Characters
-                                with a simple belief: every event deserves a touch of magic and
-                                a team that follows through.
+                                with a simple belief: every event deserves great entertainment
+                                and a team that follows through.
                             </p>
                             <p>
-                                What began as a performance business evolved into a curated
-                                roster of professional entertainers who understand pacing,
-                                presentation, and guest experience.
+                                What began as a performance business grew into a reliable team
+                                of professional entertainers who know how to connect with guests
+                                and keep events running smoothly.
                             </p>
                             <p>
                                 Today, the agency continues to focus on reliability,
-                                affordability, and strong performer-client matches rather than
-                                overpromising or overcomplicating the booking.
+                                affordability, and helping clients book the right performers
+                                without making the process complicated.
                             </p>
                         </div>
                         <div className="about-img reveal reveal-delay-2">
@@ -68,9 +68,40 @@ function About() {
                             </div>
                             <div className="about-tag">
                                 30+
-                                <span>Years of Magic</span>
+                                <span>Years of Entertainment</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="page-section-soft">
+                <div className="section-inner">
+                    <div className="section-heading reveal">
+                        <span className="section-label">Clients and Locations</span>
+                        <h2 className="section-title">
+                            Trusted by <em>well-known</em> local names
+                        </h2>
+                        <p className="section-lead">
+                            We&apos;ve performed for major venues, public events, and recognizable
+                            clients across the area.
+                        </p>
+                    </div>
+                    <div className="pill-grid">
+                        {clientShowcase.map((item, index) => (
+                            <article
+                                key={item}
+                                className={[
+                                    'story-card',
+                                    'reveal',
+                                    index > 0 ? `reveal-delay-${Math.min(index, 2)}` : '',
+                                ]
+                                    .filter(Boolean)
+                                    .join(' ')}
+                            >
+                                <h3>{item}</h3>
+                            </article>
+                        ))}
                     </div>
                 </div>
             </section>

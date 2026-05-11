@@ -51,8 +51,7 @@ function Book() {
                         </h1>
                         <p className="section-lead page-lead">
                             Whether you need one standout act or a full entertainment mix,
-                            the process starts with a simple event brief and a tailored
-                            recommendation.
+                            the process starts with a simple event brief and easy next steps.
                         </p>
                         <div className="hero-actions">
                             <a href="mailto:kimscharacters@gmail.com" className="btn-primary">
@@ -123,6 +122,8 @@ function Book() {
                                             {performer.title}
                                         </option>
                                     ))}
+                                    <option value="Santa">Santa</option>
+                                    <option value="Holiday Entertainment">Holiday Entertainment</option>
                                     <option value="Other">Other</option>
                                 </select>
                             </div>
@@ -255,9 +256,10 @@ function Book() {
                             <div className="booking-policy">
                                 <span className="booking-policy-label">Cancellation Policy</span>
                                 <ul>
-                                    <li>48 hours or more before the event: full refund</li>
-                                    <li>48 to 24 hours before the event: 50% payment applies</li>
+                                    <li>72 hours or more before the event: full refund</li>
+                                    <li>72 to 24 hours before the event: 50% payment applies</li>
                                     <li>Less than 24 hours before the event: full payment applies</li>
+                                    <li>$75 deposit required to hold your date</li>
                                 </ul>
                             </div>
                             <div className="booking-direct-contact">
@@ -277,8 +279,8 @@ function Book() {
                             Let&apos;s build the right <em>entertainment mix</em>
                         </h2>
                         <p className="section-lead">
-                            Reach out with your event details and we will recommend the best
-                            performer options for the audience, space, and budget.
+                            Reach out with your event details and we&apos;ll help you choose the
+                            best performer options for your audience, space, and budget.
                         </p>
                     </div>
                     <div className="contact-actions">

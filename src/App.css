@@ -1812,27 +1812,6 @@ section {
   min-height: 100%;
 }
 
-.gal-item::after {
-  content: 'View';
-  position: absolute;
-  inset: 0;
-  background: rgba(45, 27, 107, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.gal-item:hover::after {
-  opacity: 1;
-}
-
 .cta-banner {
   padding: 80px 40px;
   margin: 0 40px 80px;

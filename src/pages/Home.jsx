@@ -12,9 +12,9 @@ function Home() {
                             Unforgettable <em>Entertainment</em> for Every Event
                         </h1>
                         <p className="hero-sub">
-                            From stilt walkers to kids camps, Kim&apos;s Cast of Characters
-                            brings the magic of live performance to parties, corporate events,
-                            and festivals across the Greater Toronto Area.
+                            From magicians to kids camps, Kim&apos;s Cast of Characters
+                            brings live entertainment to parties, school events, corporate
+                            events, and festivals across the region.
                         </p>
                         <div className="hero-actions">
                             <Link to="/book" className="btn-primary">
@@ -30,7 +30,7 @@ function Home() {
                                 <span>Years Experience</span>
                             </div>
                             <div className="stat-item">
-                                <strong>500+</strong>
+                                <strong>5000+</strong>
                                 <span>Events Performed</span>
                             </div>
                             <div className="stat-item">
@@ -95,11 +95,10 @@ function Home() {
                         <Link className="band-card reveal reveal-delay-2" to="/book">
                             <span className="section-label">Book</span>
                             <h2 className="section-title compact-title">
-                                A booking process that feels <em>easy</em>
+                                Booking made <em>easy</em>
                             </h2>
                             <p>
-                                See how to go from event brief to confirmed entertainment plan
-                                without the usual friction.
+                                See how simple it is to book the right entertainment for your event.
                             </p>
                         </Link>
                     </div>
@@ -115,9 +114,9 @@ function Home() {
                                 The GTA&apos;s Most <em>Trusted</em> Entertainment
                             </h2>
                             <p className="section-lead">
-                                We&apos;re not a directory. We&apos;re a curated team that knows how to
-                                match live performance to the room, the audience, and the pace
-                                of the event.
+                                We help parents, schools, businesses, and event organizers book
+                                performers that fit the crowd, the space, and the kind of event
+                                they&apos;re planning.
                             </p>
 
                             <ul className="why-list">
@@ -197,8 +196,8 @@ function Home() {
             <div className="cta-banner">
                 <h2>Make Your Event Unforgettable</h2>
                 <p>
-                    Ready to add some magic? Get in touch with Kim&apos;s team and let&apos;s
-                    build the right entertainment mix for your event.
+                    Ready to add great entertainment? Get in touch with Kim&apos;s team and
+                    we&apos;ll help you choose the right fit for your event.
                 </p>
                 <Link to="/book" className="btn-white">
                     Start Your Booking

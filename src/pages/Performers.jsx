@@ -9,11 +9,11 @@ function Performers() {
                     <div className="reveal">
                         <span className="section-label">Performers</span>
                         <h1 className="page-title light-title">
-                            A cast designed to <em>turn heads</em> and hold attention
+                            A cast ready to <em>bring fun</em> to your event
                         </h1>
                         <p className="section-lead page-lead light-lead">
-                            From visual spectacle to intimate guest interaction, these acts
-                            are selected for professionalism, adaptability, and presence.
+                            From eye-catching acts to close-up guest interaction, these
+                            performers are ready for parties, schools, festivals, and more.
                         </p>
                     </div>
                     <div className="showcase-grid reveal reveal-delay-2">
@@ -36,8 +36,8 @@ function Performers() {
                             The <em>Cast</em> You&apos;ve Been Looking For
                         </h2>
                         <p className="section-lead">
-                            Hand-picked professionals ready to dazzle your audience. Every
-                            act can be matched to venue size, audience type, and event pace.
+                            Friendly, experienced performers for different crowd sizes,
+                            age groups, and event styles.
                         </p>
                     </div>
 
@@ -77,15 +77,15 @@ function Performers() {
                     <div className="metric-grid">
                         <article className="metric-card reveal">
                             <strong>Arrival energy</strong>
-                            <p>Use tall, visual, or interactive acts to establish mood quickly.</p>
+                            <p>Use visual or interactive acts to make a strong first impression.</p>
                         </article>
                         <article className="metric-card reveal reveal-delay-1">
                             <strong>Guest interaction</strong>
-                            <p>Choose performers who can create one-on-one engagement without slowing flow.</p>
+                            <p>Choose performers who can connect one-on-one without slowing things down.</p>
                         </article>
                         <article className="metric-card reveal reveal-delay-2">
                             <strong>Program balance</strong>
-                            <p>Blend roaming and featured acts when an event needs both spectacle and structure.</p>
+                            <p>Mix roaming acts and feature acts when you want both energy and structure.</p>
                         </article>
                     </div>
                 </div>
