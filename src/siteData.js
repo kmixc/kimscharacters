@@ -14,8 +14,8 @@ const imageByName = Object.fromEntries(
 
 export const featuredImages = {
     hero: {
-        src: imageByName.performer_hero_1,
-        alt: 'A Kim\'s Cast performer entertaining guests at an event',
+        src: imageByName.img_22,
+        alt: 'Young elf performers with Santa at a holiday event',
     },
     about: {
         src: imageByName.kim_1,
@@ -175,7 +175,7 @@ export const whyProofPoints = [
     {
         title: 'Straightforward communication',
         description:
-            'Clients get clear answers, practical suggestions, and a booking process that stays simple.',
+            'Clients get clear answers, helpful suggestions, and a booking process that stays simple.',
     },
 ]
 
@@ -200,7 +200,7 @@ export const servicePromises = [
 export const galleryItems = [
     {
         label: 'Feature Performance Shot',
-        src: imageByName.performer_hero_1,
+        src: imageByName.img_22,
         alt: 'Feature entertainment performance at a live event',
     },
     {
@@ -209,14 +209,14 @@ export const galleryItems = [
         alt: 'Live performer in action at an event',
     },
     {
-        label: 'Fortune Teller Session',
-        src: imageByName.img_14,
-        alt: 'One-on-one performer interaction with an event guest',
+        label: 'Holiday Event Scene',
+        src: imageByName.img_24,
+        alt: 'Holiday characters entertaining a live crowd',
     },
     {
-        label: 'Stilt Walker Parade',
-        src: imageByName.img_21,
-        alt: 'Roaming entertainment moving through a crowd',
+        label: 'Mascot Appearance',
+        src: imageByName.img_29,
+        alt: 'Mascot entertainment at a live event',
     },
     {
         label: 'Character Meet & Greet',
@@ -441,16 +441,16 @@ export const performerCategories = [
         items: 'Mascots, character actors, interactive hosts',
     },
     {
-        title: 'Featured moments',
+        title: 'Stage shows',
         description:
-            'Best when you need a performer to anchor a scheduled showcase or focal point.',
-        items: 'Jugglers, specialty acts, themed feature performances',
+            'Best for entertaining large groups when you need a performer to hold attention from the front of the room.',
+        items: 'Magicians, jugglers, specialty acts, themed feature performances',
     },
     {
-        title: 'Atmosphere builders',
+        title: 'Crowd pleasers',
         description:
-            'Designed to create conversation, delight, and memorable one-on-one guest interactions.',
-        items: 'Fortune tellers, themed characters, ambient entertainers',
+            'Designed for fun, easy guest interaction and walk-around entertainment people naturally gather around.',
+        items: 'Caricaturists, glitter tattoos, balloonists, face painters, interactive entertainers',
     },
 ]
 
@@ -503,4 +503,37 @@ export const clientShowcase = [
     'Eaton Centre',
     'Yorkdale Mall',
     'Parades',
+]
+
+export const pricingOptions = [
+    {
+        title: 'Face Painting',
+        priceLabel: 'Starting at pricing available',
+        detail: 'Good for fairs, school events, parties, and community days.',
+    },
+    {
+        title: 'Balloonists',
+        priceLabel: 'Starting at pricing available',
+        detail: 'A strong fit for line entertainment, parties, and family events.',
+    },
+    {
+        title: 'Glitter Tattoos',
+        priceLabel: 'Starting at pricing available',
+        detail: 'Simple add-on entertainment for parties, malls, and public events.',
+    },
+    {
+        title: 'Magicians',
+        priceLabel: 'Custom quote only',
+        detail: 'Pricing depends on show length, audience size, and event setup.',
+    },
+    {
+        title: 'Mascots',
+        priceLabel: 'Custom quote only',
+        detail: 'Pricing depends on the character, timing, and location.',
+    },
+    {
+        title: 'Custom Entertainment',
+        priceLabel: 'Custom quote only',
+        detail: 'Built around your event needs, theme, and performer mix.',
+    },
 ]

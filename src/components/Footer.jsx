@@ -44,7 +44,7 @@ function Footer() {
                         </Link>
                         <p>
                             Bringing unforgettable live entertainment to the Greater Toronto
-                            Area for over 40 years. Founded by Kim Cayer in Mississauga,
+                            Area for over 30 years. Founded by Kim Cayer in Mississauga,
                             Ontario.
                         </p>
                         <div className="social-row">

@@ -31,13 +31,14 @@ function Performers() {
             <section className="services page-section">
                 <div className="section-inner">
                     <div className="services-header reveal">
-                        <span className="section-label">Featured Acts</span>
+                        <span className="section-label">Stage Shows</span>
                         <h2 className="section-title">
                             The <em>Cast</em> You&apos;ve Been Looking For
                         </h2>
                         <p className="section-lead">
                             Friendly, experienced performers for different crowd sizes,
-                            age groups, and event styles.
+                            age groups, and event styles, including stage shows that work well
+                            for larger groups.
                         </p>
                     </div>
 

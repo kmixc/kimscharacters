@@ -21,7 +21,7 @@ function About() {
                         <h2 className="story-panel-title">Local roots. Long-running trust.</h2>
                         <p className="story-panel-copy">
                             A performer-led agency built in Mississauga and shaped by
-                            decades of repeat clients, practical planning, and strong live
+                            decades of repeat clients, careful planning, and strong live
                             entertainment.
                         </p>
                         <div className="story-chip-group">

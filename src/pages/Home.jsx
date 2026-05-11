@@ -48,7 +48,7 @@ function Home() {
                                 alt={featuredImages.hero.alt}
                             />
                             <div className="hero-img-overlay">
-                                <span className="img-label">Live entertainment across the GTA</span>
+                                <span className="img-label">Holiday entertainment for families, schools, and events</span>
                             </div>
                         </div>
                         <div className="float-card float-top-right">
@@ -166,7 +166,7 @@ function Home() {
                     <div className="gallery-header reveal">
                         <span className="section-label">Highlights</span>
                         <h2 className="section-title">
-                            Events We&apos;ve <em>Brought to Life</em>
+                            Real Event <em>Highlights</em>
                         </h2>
                         <p className="section-lead">
                             A glimpse into the energy, creativity, and joy our performers

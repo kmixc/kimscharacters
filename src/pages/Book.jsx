@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { performers } from '../siteData'
+import { performers, pricingOptions } from '../siteData'
 
 const bookingFormEndpoint = 'https://formspree.io/f/xdabpvdg'
 
@@ -259,7 +259,7 @@ function Book() {
                                     <li>72 hours or more before the event: full refund</li>
                                     <li>72 to 24 hours before the event: 50% payment applies</li>
                                     <li>Less than 24 hours before the event: full payment applies</li>
-                                    <li>$75 deposit required to hold your date</li>
+                                    <li>$50 non-refundable deposit required to hold your date</li>
                                 </ul>
                             </div>
                             <div className="booking-direct-contact">
@@ -267,6 +267,41 @@ function Book() {
                                 <a href="tel:+14166182012">+1 (416) 618-2012</a>
                             </div>
                         </aside>
+                    </div>
+                </div>
+            </section>
+
+            <section className="page-section-soft">
+                <div className="section-inner">
+                    <div className="section-heading reveal">
+                        <span className="section-label">Pricing</span>
+                        <h2 className="section-title">
+                            Simple pricing for some services, <em>custom quotes</em> for others
+                        </h2>
+                        <p className="section-lead">
+                            Some bookings can show starting pricing, while others depend on
+                            timing, travel, audience size, or the type of performer you need.
+                        </p>
+                    </div>
+
+                    <div className="metric-grid pricing-grid">
+                        {pricingOptions.map((item, index) => (
+                            <article
+                                key={item.title}
+                                className={[
+                                    'metric-card',
+                                    'pricing-card',
+                                    'reveal',
+                                    index > 0 ? `reveal-delay-${Math.min(index % 3, 2)}` : '',
+                                ]
+                                    .filter(Boolean)
+                                    .join(' ')}
+                            >
+                                <strong>{item.title}</strong>
+                                <p className="pricing-card-value">{item.priceLabel}</p>
+                                <p>{item.detail}</p>
+                            </article>
+                        ))}
                     </div>
                 </div>
             </section>

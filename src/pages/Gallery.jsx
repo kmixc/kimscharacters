@@ -160,7 +160,7 @@ function Gallery() {
             <section className="gallery page-section">
                 <div className="section-inner">
                     <div className="gallery-header reveal">
-                        <span className="section-label">Featured Moments</span>
+                        <span className="section-label">Event Moments</span>
                         <h2 className="section-title">
                             A gallery built around <em>real event energy</em>
                         </h2>

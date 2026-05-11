@@ -25,9 +25,9 @@ function Nav({
                 <Link className="logo-wrap brand-link" to="/" onClick={onNavigate}>
                     <img className="brand-logo" src={brandLogo} alt="Kim's Cast of Characters logo" />
                     <div className="logo-text">
-                        Kim&apos;s Cast
+                        Kim&apos;s Characters
                         <br />
-                        <span>of Characters</span>
+                        <span>Cast of Characters</span>
                     </div>
                 </Link>
 

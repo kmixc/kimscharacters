@@ -107,7 +107,7 @@ nav.scrolled {
 .logo-wrap {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .brand-link {
@@ -115,22 +115,26 @@ nav.scrolled {
 }
 
 .brand-logo {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   flex-shrink: 0;
   object-fit: contain;
 }
 
 .logo-text {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 800;
+  font-size: 1.45rem;
   color: var(--plum);
-  line-height: 1.2;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
 }
 
 .logo-text span {
   color: var(--coral);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .nav-links {
@@ -1903,6 +1907,22 @@ footer {
   padding: 4px;
 }
 
+.pricing-grid {
+  margin-top: 8px;
+}
+
+.pricing-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 249, 237, 0.95));
+}
+
+.pricing-card-value {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--coral);
+  margin: 12px 0 10px;
+}
+
 .footer-brand p {
   font-size: 0.87rem;
   line-height: 1.7;
@@ -2018,6 +2038,19 @@ footer {
 @media (max-width: 960px) {
   nav {
     padding: 16px 24px;
+  }
+
+  .brand-logo {
+    width: 54px;
+    height: 54px;
+  }
+
+  .logo-text {
+    font-size: 1.18rem;
+  }
+
+  .logo-text span {
+    font-size: 0.74rem;
   }
 
   .nav-links {
